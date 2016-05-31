@@ -1,0 +1,22 @@
+% Proof search .
+
+start : type.
+r1 : type.
+r2 : type.
+r3 : type.
+r4 : type.
+end : type.
+
+% Connectors
+start_r1 : start -o {r1}.
+r1_r2 : r1 -o {r2}.
+r1_r3 : r1 -o {r3}.
+r2_r1 : r2 -o {r1}.
+r2_r4 : r2 -o {r4}.
+r3_r1 : r3 -o {r1}.
+r3_r4 : r3 -o {r4}.
+r4_r2 : r4 -o {r2}.
+r4_r3 : r4 -o {r3}.
+r4_end : r4 -o {end}.
+
+#trace * start.
